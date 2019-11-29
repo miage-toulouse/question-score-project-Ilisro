@@ -15,8 +15,8 @@ public class QuestionAChoixMultipleTest {
 
     @Before
     public void setUp() throws Exception {
-        //Given : une instance de question à choix exclusif
-        ArrayList<Integer> bonnesReponses = new ArrayList<Integer>();
+        //Given : une instance de question à choix multiple
+        ArrayList<Integer> bonnesReponses = new ArrayList<>();
         bonnesReponses.add(2);
         bonnesReponses.add(3);
         questionM = new QuestionAChoixMultiple("Quel est la différence entre un canard ?", bonnesReponses);
@@ -36,7 +36,6 @@ public class QuestionAChoixMultipleTest {
         int indiceEtu = 2;
         //And : on demande le score de l'indice à la question
         float resScore = questionM.getScoreForIndice(indiceEtu);
-
         //Then : le score obtenu est 100
         assertEquals(50f, resScore, 0.01f);
     }
